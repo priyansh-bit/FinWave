@@ -405,10 +405,18 @@ const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 const switchLinks = document.querySelectorAll('[data-switch]');
 
-btnGetStarted.addEventListener('click', () => {
+btnGetStarted.addEventListener('click', openAuth);
+document.querySelectorAll('.btn-get-started').forEach(el => {
+  if (el !== btnGetStarted) el.addEventListener('click', openAuth);
+});
+document.querySelectorAll('.btn.btn-primary, .btn.btn-secondary').forEach(el => {
+  el.addEventListener('click', (e) => { e.preventDefault(); openAuth(); });
+});
+
+function openAuth() {
   authOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
-});
+}
 
 function closeAuth() {
   authOverlay.classList.remove('active');
