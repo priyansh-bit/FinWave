@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinWave — Ride the Wave of Smarter Finance</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23305CDE'/%3E%3Cstop offset='100%25' style='stop-color:%23B8860B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3Cpath d='M10 20 L16 10 L22 20' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="description" content="An award-winning scroll-driven cinematic experience and premium financial management platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body>
+  <!-- High-end Minimalist Preloader -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-spinner-container">
+        <svg class="spinner-svg" viewBox="0 0 100 100">
+          <circle class="spinner-bg" cx="50" cy="50" r="45"></circle>
+          <circle id="spinner-progress" class="spinner-fg" cx="50" cy="50" r="45"></circle>
+        </svg>
+      </div>
+      <div class="loader-percentage" id="loader-percent">0%</div>
+      <div class="loader-label">FinWave Cinematic</div>
+    </div>
+  </div>
+
+  <!-- Global Floating Status Navigation Bar -->
+  <header class="global-header">
+    <div class="header-container">
+      <div class="header-logo">
+        <div class="wave-logo-icon"></div>
+        <span class="logo-text">FinWave</span>
+      </div>
+      <nav class="header-nav">
+        <a href="#product-section" class="nav-link">Overview</a>
+        <a href="#analytics-section" class="nav-link">Analytics</a>
+        <a href="#pricing-section" class="nav-link">Pricing</a>
+        <a href="#faq-section" class="nav-link">FAQ</a>
+        <a href="#contact-section" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-status">
+        <span class="status-pulse"></span>
+        <span class="status-text">LIVE VOL: <span id="header-ticker">₹4,82,00,000</span></span>
+        <button class="btn-get-started" id="btn-get-started">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Cinematic Canvas Container (Sections 1 - 10) -->
+  <div class="prologue-wrapper">
+    <canvas id="cinema-canvas"></canvas>
+    
+    <!-- Narrative Text Overlays -->
+    <div class="narrative-container">
+      <div class="narrative-text" id="text-section-02">
+        <h2>Ride the <span class="w-em">Wave</span> of Smarter <span class="f-em">Finance</span>.</h2>
+      </div>
+      
+      <div class="narrative-text" id="text-section-04">
+        <h2>Every <span class="r-em">rupee</span> has a <span class="s-em">story</span>.</h2>
+      </div>
+      
+      <div class="narrative-text" id="text-section-06">
+        <h2>Most people don't know where their <span class="m-em">money</span> goes.</h2>
+      </div>
+      
+      <div class="narrative-text" id="text-section-09">
+        <h2><span class="fin">Fin</span><span class="wave">Wave</span> turns chaos into clarity.</h2>
+      </div>
+    </div>
+
+    <!-- Scroll Prompt Hint -->
+    <div id="scroll-prompt" class="scroll-prompt">
+      <span class="prompt-text">Scroll Me</span>
+      <div class="prompt-line">
+        <div class="prompt-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Marketing Suite -->
+  <main class="marketing-suite">
+    <!-- SECTION 11: Product Reveal -->
+    <section class="section product-reveal-section" id="product-section">
+      <div class="container">
+        <div class="section-header center">
+          <h2 class="section-title"><span class="t-gold">Born</span><span class="t-light"> from </span><span class="t-blue">Clarity</span></h2>
+          <p class="section-subtitle">Experience the ultimate reward of a streamlined financial existence. Crafted with glassmorphic sophistication.</p>
+        </div>
+
+        <!-- Luxury Interactive Dashboard Mockup -->
+        <div class="dashboard-mockup">
+          <div class="dashboard-header">
+            <div class="logo-area">
+              <div class="wave-logo-icon"></div>
+              <span class="logo-text">FinWave</span>
+            </div>
+            <div class="dashboard-nav">
+              <span class="active">Overview</span>
+              <span>Analytics</span>
+              <span>Budgets</span>
+              <span>Security</span>
+            </div>
+            <div class="dashboard-user">
+              <div class="user-avatar"></div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <!-- Balance Card -->
+            <div class="dashboard-card main-balance-card fade-up-card">
+              <span class="card-label">Total Balance</span>
+              <div class="balance-value" id="balance-counter">₹0</div>
+              <div class="card-meta">
+                <span class="trend-up">+12.4% vs last month</span>
+              </div>
+            </div>
+
+            <!-- Income Card -->
+            <div class="dashboard-card mini-card fade-up-card">
+              <span class="card-label">Monthly Income</span>
+              <div class="mini-value">₹4,82,900</div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+
+            <!-- Expense Card -->
+            <div class="dashboard-card mini-card fade-up-card">
+              <span class="card-label">Monthly Expenses</span>
+              <div class="mini-value">₹1,24,350</div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill warning" style="width: 25%;"></div>
+              </div>
+            </div>
+
+            <!-- Savings Card -->
+            <div class="dashboard-card mini-card fade-up-card">
+              <span class="card-label">Total Savings</span>
+              <div class="mini-value">₹3,58,550</div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill success" style="width: 74%;"></div>
+              </div>
+            </div>
+
+            <!-- SECTION 12: Feature Storytelling - Charts & Progress -->
+            <!-- Analytics Chart Card -->
+            <div class="dashboard-card chart-card span-2 fade-up-card">
+              <div class="card-header-row">
+                <span class="card-label">Cash Flow Wave</span>
+                <div class="chart-legend">
+                  <span class="legend-dot active"></span><span>Actual Flow</span>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <svg viewBox="0 0 500 180" class="analytics-chart-svg">
+                  <defs>
+                    <linearGradient id="chart-area-gradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="rgba(29, 29, 31, 0.06)"></stop>
+                      <stop offset="100%" stop-color="rgba(29, 29, 31, 0.0)"></stop>
+                    </linearGradient>
+                  </defs>
+                  <!-- Area path under the curve -->
+                  <path id="chart-area-path" d="M 0,180 L 0,140 C 60,110 120,160 180,95 C 240,30 300,80 360,45 C 420,10 450,110 500,70 L 500,180 Z" fill="url(#chart-area-gradient)"></path>
+                  <!-- The main curve -->
+                  <path id="chart-line-path" d="M 0,140 C 60,110 120,160 180,95 C 240,30 300,80 360,45 C 420,10 450,110 500,70" fill="none" stroke="#1d1d1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Budget Rings Card -->
+            <div class="dashboard-card budget-card fade-up-card">
+              <span class="card-label">Budget Allocations</span>
+              <div class="budget-rings-container">
+                <div class="budget-ring-item">
+                  <div class="ring-svg-wrapper">
+                    <svg viewBox="0 0 36 36" class="ring-svg">
+                      <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path class="ring-fg" id="budget-ring-workspace" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="ring-center-text">85%</div>
+                  </div>
+                  <span class="ring-label">Workspace</span>
+                </div>
+                <div class="budget-ring-item">
+                  <div class="ring-svg-wrapper">
+                    <svg viewBox="0 0 36 36" class="ring-svg">
+                      <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path class="ring-fg" id="budget-ring-assets" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="ring-center-text">60%</div>
+                  </div>
+                  <span class="ring-label">Assets</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Transaction Card -->
+            <div class="dashboard-card list-card span-3 fade-up-card">
+              <span class="card-label">Recent Transactions</span>
+              <div class="transaction-list">
+                <div class="transaction-row">
+                  <div class="tx-icon">🎨</div>
+                  <div class="tx-info">
+                    <span class="tx-title">Studio Render Suite</span>
+                    <span class="tx-category">Workspace Assets</span>
+                  </div>
+                  <div class="tx-amount negative">- ₹38,400</div>
+                </div>
+                <div class="transaction-row">
+                  <div class="tx-icon">⚡</div>
+                  <div class="tx-info">
+                    <span class="tx-title">Octane Renderer Pack</span>
+                    <span class="tx-category">Subscriptions</span>
+                  </div>
+                  <div class="tx-amount negative">- ₹12,900</div>
+                </div>
+                <div class="transaction-row">
+                  <div class="tx-icon">💎</div>
+                  <div class="tx-info">
+                    <span class="tx-title">Client Escrow Release</span>
+                    <span class="tx-category">Inward Wire</span>
+                  </div>
+                  <div class="tx-amount positive">+ ₹2,45,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 13: Trust Section -->
+    <section class="section trust-section">
+      <div class="container">
+        <div class="section-header center">
+          <h2 class="section-title"><span class="t-cyan">Uncompromising</span> <span class="t-gold">Security</span></h2>
+          <p class="section-subtitle">We secure your assets using military-grade protocols and biometric authentication. Safe, private, and highly reliable.</p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-card fade-up-card">
+            <div class="trust-icon-box">🔒</div>
+            <h3 class="trust-card-title">AES-256 Encryption</h3>
+            <p class="trust-card-text">Every byte of transaction data is shielded using state-of-the-art cryptographic standards, completely invisible to outside eyes.</p>
+          </div>
+          <div class="trust-card fade-up-card">
+            <div class="trust-icon-box">🛡️</div>
+            <h3 class="trust-card-title">Guaranteed Privacy</h3>
+            <p class="trust-card-text">FinWave runs on a zero-knowledge data architecture. Your financial profiles and balances belong to you alone. We never share them.</p>
+          </div>
+          <div class="trust-card fade-up-card">
+            <div class="trust-icon-box">🚀</div>
+            <h3 class="trust-card-title">Ultra performance</h3>
+            <p class="trust-card-text">Built on a globally distributed cloud layer. Real-time updates with sub-millisecond response latencies and 99.99% operational uptime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 14: Social Proof Section -->
+    <section class="section stats-section" id="analytics-section">
+      <div class="container">
+        <div class="section-header center">
+          <h2 class="section-title"><span class="t-gold">Fin</span><span class="t-purple">Wave</span><span class="t-light"> in </span><span class="t-gold">Numbers</span></h2>
+          <p class="section-subtitle">Real metrics reflecting the confidence of thousands of premium investors and designers globally.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" id="stat-transactions" data-target="720">₹0M+</div>
+            <span class="stat-label">Transactions Secured</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-csat" data-target="99.4">0.0%</div>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-insights" data-target="4.8">0M+</div>
+            <span class="stat-label">Insights Generated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="sub-label">Testimonials</span>
+          <h2 class="section-title"><span class="t-gold">Trusted</span><span class="t-light"> by </span><span class="t-cyan">Thousands</span></h2>
+          <p class="section-subtitle">Hear from those who've transformed their financial lives with FinWave.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"FinWave gave me clarity I never had. My savings grew 40% in 3 months just by understanding my cash flow."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #305CDE, #1a3a8a);">AR</div>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Arjun Reddy</span>
+                <span class="testimonial-role">Freelance Designer, Mumbai</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The cinematic scroll experience hooked me instantly. Now I actually enjoy tracking my finances every day."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #0f3b2a, #1a6b4a);">PS</div>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Priya Sharma</span>
+                <span class="testimonial-role">Startup Founder, Bangalore</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Premium, secure, and incredibly intuitive. Finally a financial platform that respects design as much as data."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #5c1a1a, #8a2a2a);">VK</div>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Vikram Khanna</span>
+                <span class="testimonial-role">Portfolio Manager, Delhi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 15: Final Calm -->
+    <section class="section final-calm-section" id="final-calm-section">
+      <div class="container center">
+        <h2 class="section-title"><span class="t-light">I finally have </span><span class="t-gold">control.</span></h2>
+        <p class="section-subtitle cta-subtitle" style="margin: 20px auto 0 auto;">The wave settles. Infinite space returns. Quiet, elegant clarity is now yours.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 16: CTA Section -->
+    <section class="section cta-section" id="cta-section">
+      <div class="container center">
+        <h2 class="section-title cta-title"><span class="t-light">Ride the </span><span class="t-gold">Wave.</span></h2>
+        <p class="section-subtitle cta-subtitle" style="margin: 20px auto 0 auto;">Step into a new era where financial life forms elegant paths. Quiet the chaos and ride the wave.</p>
+        
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary">Start Riding the Wave</a>
+          <a href="#" class="btn btn-secondary">Experience FinWave</a>
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap">
+          <a href="#" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#1d1d1f;color:#fff;border-radius:12px;text-decoration:none;font-size:13px;font-weight:500">App Store</a>
+          <a href="#" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#1d1d1f;color:#fff;border-radius:12px;text-decoration:none;font-size:13px;font-weight:500">Google Play</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works" style="padding:80px 24px;background:#fff">
+      <div class="container center" style="max-width:720px;margin:0 auto">
+        <div class="section-header center" style="margin-bottom:48px">
+          <h2 class="section-title"><span class="t-gold">How</span><span class="t-light"> It Works</span></h2>
+          <p class="section-subtitle">Three simple steps to financial clarity.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left">
+          <div style="background:#f5f5f7;border-radius:20px;padding:28px;text-align:center">
+            <div style="width:48px;height:48px;border-radius:14px;background:#1d1d1f;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:18px;font-weight:600;color:#fff">1</div>
+            <h3 style="font-size:15px;font-weight:600;color:#1d1d1f;margin:0 0 6px">Link Your Accounts</h3>
+            <p style="font-size:13px;color:#86868b;line-height:1.6;margin:0">Connect your bank accounts, credit cards, and wallets in one secure place.</p>
+          </div>
+          <div style="background:#f5f5f7;border-radius:20px;padding:28px;text-align:center">
+            <div style="width:48px;height:48px;border-radius:14px;background:#1d1d1f;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:18px;font-weight:600;color:#fff">2</div>
+            <h3 style="font-size:15px;font-weight:600;color:#1d1d1f;margin:0 0 6px">Track Automatically</h3>
+            <p style="font-size:13px;color:#86868b;line-height:1.6;margin:0">Transactions sync in real-time. Categories, budgets, and insights update instantly.</p>
+          </div>
+          <div style="background:#f5f5f7;border-radius:20px;padding:28px;text-align:center">
+            <div style="width:48px;height:48px;border-radius:14px;background:#1d1d1f;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:18px;font-weight:600;color:#fff">3</div>
+            <h3 style="font-size:15px;font-weight:600;color:#1d1d1f;margin:0 0 6px">Achieve Your Goals</h3>
+            <p style="font-size:13px;color:#86868b;line-height:1.6;margin:0">Set budgets, track goals, and watch your savings grow with smart recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES GRID -->
+    <section class="section" id="features-section" style="padding:80px 24px;background:#f5f5f7">
+      <div class="container center" style="max-width:800px;margin:0 auto">
+        <div class="section-header center" style="margin-bottom:40px">
+          <h2 class="section-title"><span class="t-gold">Everything</span><span class="t-light"> You Need</span></h2>
+          <p class="section-subtitle">A complete financial toolkit, beautifully designed.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left">
+          <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:36px;height:36px;border-radius:10px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3 style="font-size:14px;font-weight:600;color:#1d1d1f;margin:0 0 4px">Dashboard Overview</h3>
+            <p style="font-size:12px;color:#86868b;line-height:1.5;margin:0">Real-time financial snapshot with income, expenses, and net worth at a glance.</p>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:36px;height:36px;border-radius:10px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+            <h3 style="font-size:14px;font-weight:600;color:#1d1d1f;margin:0 0 4px">Advanced Analytics</h3>
+            <p style="font-size:12px;color:#86868b;line-height:1.5;margin:0">Detailed charts, category breakdowns, and spending trends to understand your habits.</p>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:36px;height:36px;border-radius:10px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h3 style="font-size:14px;font-weight:600;color:#1d1d1f;margin:0 0 4px">Budget Management</h3>
+            <p style="font-size:12px;color:#86868b;line-height:1.5;margin:0">Set category budgets, track progress, and get alerts before you overspend.</p>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:36px;height:36px;border-radius:10px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3 style="font-size:14px;font-weight:600;color:#1d1d1f;margin:0 0 4px">Goal Tracking</h3>
+            <p style="font-size:12px;color:#86868b;line-height:1.5;margin:0">Set financial goals, visualize progress, and stay motivated with milestone alerts.</p>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:36px;height:36px;border-radius:10px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3 style="font-size:14px;font-weight:600;color:#1d1d1f;margin:0 0 4px">Subscription Manager</h3>
+            <p style="font-size:12px;color:#86868b;line-height:1.5;margin:0">Track all subscriptions, get renewal reminders, and cancel unused services easily.</p>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:36px;height:36px;border-radius:10px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3 style="font-size:14px;font-weight:600;color:#1d1d1f;margin:0 0 4px">Bank-Grade Security</h3>
+            <p style="font-size:12px;color:#86868b;line-height:1.5;margin:0">Military-grade encryption, biometric auth, and zero-knowledge architecture protect your data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="pricing-section" style="background:#f5f5f7;padding:80px 24px">
+      <div class="container center">
+        <div class="section-header center" style="margin-bottom:40px">
+          <h2 class="section-title"><span class="t-gold">Simple</span><span class="t-light"> Pricing</span></h2>
+          <p class="section-subtitle">Start free, upgrade when you grow.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:800px;margin:0 auto">
+          <div style="background:#fff;border-radius:20px;padding:32px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:40px;height:40px;border-radius:12px;background:#f5f5f7;margin:0 auto 12px;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h3 style="font-size:18px;font-weight:600;margin:0 0 4px;color:#1d1d1f">Free</h3>
+            <div style="font-size:32px;font-weight:700;color:#1d1d1f;margin:12px 0">₹0<span style="font-size:14px;font-weight:400;color:#86868b">/mo</span></div>
+            <ul style="list-style:none;padding:0;margin:16px 0;font-size:13px;color:#86868b;line-height:2.2">
+              <li>✅ Unlimited transactions</li><li>✅ 3 budgets</li><li>✅ 2 goals</li><li>✅ Basic analytics</li>
+            </ul>
+            <a href="#" class="btn-get-started" style="display:inline-block;padding:10px 28px;background:#1d1d1f;color:#fff;border-radius:30px;text-decoration:none;font-size:13px;font-weight:500">Get Started</a>
+          </div>
+          <div style="background:#fff;border-radius:20px;padding:32px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);position:relative">
+            <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#305CDE;color:#fff;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:600">Popular</span>
+            <div style="width:40px;height:40px;border-radius:12px;background:#e8f0fe;margin:0 auto 12px;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#305CDE" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3 style="font-size:18px;font-weight:600;margin:0 0 4px;color:#1d1d1f">Pro</h3>
+            <div style="font-size:32px;font-weight:700;color:#1d1d1f;margin:12px 0">₹499<span style="font-size:14px;font-weight:400;color:#86868b">/mo</span></div>
+            <ul style="list-style:none;padding:0;margin:16px 0;font-size:13px;color:#86868b;line-height:2.2">
+              <li>✅ Everything in Free</li><li>✅ Unlimited budgets</li><li>✅ Unlimited goals</li><li>✅ Advanced analytics</li><li>✅ Priority support</li>
+            </ul>
+            <a href="#" class="btn-get-started" style="display:inline-block;padding:10px 28px;background:#305CDE;color:#fff;border-radius:30px;text-decoration:none;font-size:13px;font-weight:500">Start Free Trial</a>
+          </div>
+          <div style="background:#fff;border-radius:20px;padding:32px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04)">
+            <div style="width:40px;height:40px;border-radius:12px;background:#f5f5f7;margin:0 auto 12px;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="9" y1="6" x2="9" y2="10"/><line x1="15" y1="6" x2="15" y2="10"/><line x1="9" y1="14" x2="9" y2="18"/><line x1="15" y1="14" x2="15" y2="18"/></svg></div>
+            <h3 style="font-size:18px;font-weight:600;margin:0 0 4px;color:#1d1d1f">Enterprise</h3>
+            <div style="font-size:32px;font-weight:700;color:#1d1d1f;margin:12px 0">Custom</div>
+            <ul style="list-style:none;padding:0;margin:16px 0;font-size:13px;color:#86868b;line-height:2.2">
+              <li>✅ Everything in Pro</li><li>✅ Team accounts</li><li>✅ API access</li><li>✅ Dedicated manager</li><li>✅ Custom integrations</li>
+            </ul>
+            <a href="#" class="btn-get-started" style="display:inline-block;padding:10px 28px;background:#1d1d1f;color:#fff;border-radius:30px;text-decoration:none;font-size:13px;font-weight:500">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" id="faq-section" style="padding:80px 24px">
+      <div class="container" style="max-width:640px;margin:0 auto">
+        <div class="section-header center" style="margin-bottom:40px">
+          <h2 class="section-title"><span class="t-gold">Frequently</span><span class="t-light"> Asked</span></h2>
+          <p class="section-subtitle">Everything you need to know.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <details style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04);cursor:pointer">
+            <summary style="font-size:14px;font-weight:500;color:#1d1d1f;cursor:pointer">Is FinWave really free?</summary>
+            <p style="font-size:13px;color:#86868b;margin:12px 0 0;line-height:1.6">Yes! The Free plan includes unlimited transactions, 3 budgets, and 2 goals. Upgrade to Pro for unlimited everything.</p>
+          </details>
+          <details style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04);cursor:pointer">
+            <summary style="font-size:14px;font-weight:500;color:#1d1d1f;cursor:pointer">Is my financial data secure?</summary>
+            <p style="font-size:13px;color:#86868b;margin:12px 0 0;line-height:1.6">Absolutely. We use bank-grade encryption, biometric auth, and never store sensitive data. Your privacy is our priority.</p>
+          </details>
+          <details style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04);cursor:pointer">
+            <summary style="font-size:14px;font-weight:500;color:#1d1d1f;cursor:pointer">Can I link multiple bank accounts?</summary>
+            <p style="font-size:13px;color:#86868b;margin:12px 0 0;line-height:1.6">Yes! FinWave supports linking multiple accounts, credit cards, and wallets. Manage everything from one dashboard.</p>
+          </details>
+          <details style="background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,0,0,0.04);cursor:pointer">
+            <summary style="font-size:14px;font-weight:500;color:#1d1d1f;cursor:pointer">How do I export my data?</summary>
+            <p style="font-size:13px;color:#86868b;margin:12px 0 0;line-height:1.6">Go to Transactions → Export to download a CSV. You can also export all data from Settings → Data & Export.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact-section" style="background:#f5f5f7;padding:80px 24px">
+      <div class="container center" style="max-width:480px;margin:0 auto">
+        <div class="section-header center" style="margin-bottom:32px">
+          <h2 class="section-title"><span class="t-gold">Get</span><span class="t-light"> in Touch</span></h2>
+          <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;text-align:left">
+          <div style="display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px;border:1px solid rgba(0,0,0,0.04)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86868b" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span style="font-size:13px;color:#86868b">hello@finwave.in</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px;border:1px solid rgba(0,0,0,0.04)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86868b" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="font-size:13px;color:#86868b">+91 98765 43210</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px;border:1px solid rgba(0,0,0,0.04)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86868b" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span style="font-size:13px;color:#86868b">Bangalore, India</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px;border:1px solid rgba(0,0,0,0.04)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86868b" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span style="font-size:13px;color:#86868b">@finwave_demo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#1d1d1f;color:rgba(255,255,255,0.5);padding:48px 24px 32px">
+      <div class="container" style="max-width:960px;margin:0 auto">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;margin-bottom:32px">
+          <div><div style="font-size:16px;font-weight:600;color:#fff;margin-bottom:12px">FinWave</div><p style="font-size:12px;line-height:1.6;margin:0">Premium financial intelligence platform. Ride the wave of smarter finance.</p></div>
+          <div><div style="font-size:13px;font-weight:500;color:#fff;margin-bottom:12px">Product</div><div style="display:flex;flex-direction:column;gap:6px;font-size:12px"><a href="#pricing-section" style="color:rgba(255,255,255,0.5);text-decoration:none">Pricing</a><a href="#faq-section" style="color:rgba(255,255,255,0.5);text-decoration:none">FAQ</a><a href="#contact-section" style="color:rgba(255,255,255,0.5);text-decoration:none">Contact</a></div></div>
+          <div><div style="font-size:13px;font-weight:500;color:#fff;margin-bottom:12px">Legal</div><div style="display:flex;flex-direction:column;gap:6px;font-size:12px"><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none">Terms of Service</a></div></div>
+          <div><div style="font-size:13px;font-weight:500;color:#fff;margin-bottom:12px">Social</div><div style="display:flex;flex-direction:column;gap:6px;font-size:12px"><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none">🐦 Twitter</a><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none">📸 @finwave_demo</a><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none">💼 LinkedIn</a><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none">📹 YouTube</a></div></div>
+        </div>
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:0 0 20px">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:11px"><span>© 2026 FinWave. All rights reserved.</span><span>Built with ❤️ for smarter finance</span></div>
+      </div>
+    </footer>
+  </main>
+  <div class="auth-overlay active" id="auth-overlay">
+    <div class="auth-modal">
+      <button class="auth-close" id="auth-close">✕</button>
+      <div class="auth-sidebar">
+        <div class="coin-container" id="coin-container">
+          <div class="coin-glow"></div>
+          <div class="golden-coin" id="golden-coin">
+            <div class="coin-face">
+              <span class="coin-symbol">₹</span>
+              <div class="coin-shine" id="coin-shine"></div>
+            </div>
+          </div>
+          <div class="coin-shadow" id="coin-shadow"></div>
+        </div>
+        <div class="sidebar-quotes">
+          <div class="quote-item active" data-index="0">
+            <p class="quote-text">"Wealth is not about having money, it's about having control."</p>
+            <span class="quote-author">— FinWave Philosophy</span>
+          </div>
+          <div class="quote-item" data-index="1">
+            <p class="quote-text">"Every great fortune begins with a single rupee saved."</p>
+            <span class="quote-author">— Ancient Wisdom</span>
+          </div>
+          <div class="quote-item" data-index="2">
+            <p class="quote-text">"Clarity in finance creates freedom in life."</p>
+            <span class="quote-author">— FinWave Manifesto</span>
+          </div>
+          <div class="quote-item" data-index="3">
+            <p class="quote-text">"Your money should work as hard as you do."</p>
+            <span class="quote-author">— Modern Finance</span>
+          </div>
+          <div class="quote-nav">
+            <span class="quote-dot active" data-index="0"></span>
+            <span class="quote-dot" data-index="1"></span>
+            <span class="quote-dot" data-index="2"></span>
+            <span class="quote-dot" data-index="3"></span>
+          </div>
+        </div>
+      </div>
+      <div class="auth-form-area">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Sign In</button>
+          <button class="auth-tab" data-tab="signup">Create Account</button>
+        </div>
+        <!-- Login Form -->
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input auth-input" placeholder="you@example.com" required>
+            <span class="auth-field-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-input auth-input" placeholder="••••••••" required>
+            <span class="auth-field-error"></span>
+          </div>
+          <div class="form-options">
+            <label class="form-checkbox">
+              <input type="checkbox"> Remember me
+            </label>
+            <a href="#" class="form-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="form-submit">Sign In</button>
+          <p class="form-alt">Don't have an account? <a href="#" class="form-link" data-switch="signup">Create one</a></p>
+        </form>
+        <!-- Sign Up Form -->
+        <form class="auth-form hidden" id="signup-form">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-input" placeholder="Create a strong password" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-input" placeholder="Confirm password" required>
+          </div>
+          <button type="submit" class="form-submit">Create Account</button>
+          <p class="form-alt">Already have an account? <a href="#" class="form-link" data-switch="login">Sign in</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FINWAVE DASHBOARD (shown after sign-in) ===== -->
+  <div class="app-dashboard" id="app-dashboard">
+    <!-- macOS-style Sidebar -->
+    <aside class="dash-sidebar" id="dash-sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-header">
+          <div class="sidebar-logo">
+            <div class="sw-logo-icon"></div>
+            <span class="sw-logo-text">FinWave</span>
+          </div>
+          <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="sw-nav-item active" data-section="overview">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span class="sw-nav-label">Dashboard</span>
+          </a>
+          <a class="sw-nav-item" data-section="transactions">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="sw-nav-label">Transactions</span>
+          </a>
+          <a class="sw-nav-item" data-section="budgets">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span class="sw-nav-label">Budgets</span>
+          </a>
+          <a class="sw-nav-item" data-section="analytics">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <span class="sw-nav-label">Analytics</span>
+          </a>
+          <a class="sw-nav-item" data-section="goals">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            <span class="sw-nav-label">Goals</span>
+          </a>
+          <a class="sw-nav-item" data-section="subscriptions">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+            <span class="sw-nav-label">Subscriptions</span>
+          </a>
+          <a class="sw-nav-item" data-section="insights">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            <span class="sw-nav-label">Insights</span>
+          </a>
+          <a class="sw-nav-item" data-section="cards">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            <span class="sw-nav-label">Cards</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a class="sw-nav-item" data-section="settings">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span class="sw-nav-label">Settings</span>
+          </a>
+          <a class="sw-nav-item" data-section="profile">
+            <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="sw-nav-label">Profile</span>
+          </a>
+          <div class="sidebar-logout" id="sidebar-logout">
+            <button class="sw-nav-item logout-item">
+              <svg class="sw-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              <span class="sw-nav-label">Logout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Main Dashboard Area -->
+    <div class="dash-main">
+      <!-- Top Navigation -->
+      <header class="dash-topnav">
+        <div class="topnav-left">
+          <div class="search-wrapper">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="search-input" placeholder="Search transactions, budgets..." />
+            <span class="search-shortcut">⌘K</span>
+          </div>
+        </div>
+        <div class="topnav-right">
+          <button class="tn-btn tn-notification">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="tn-badge">3</span>
+          </button>
+          <button class="tn-btn tn-theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <div class="tn-avatar">AR</div>
+          <button class="tn-quick-action">+ New</button>
+          <div class="av-dropdown" id="av-dropdown">
+            <div class="av-dd-header"><div class="av-dd-avatar">AR</div><div class="av-dd-info"><span class="av-dd-name">Arjun Reddy</span><span class="av-dd-email">arjun@finwave.in</span></div></div>
+            <div class="av-dd-menu"><button class="av-dd-item" data-section="profile"><span class="av-dd-icon"></span> Profile</button><button class="av-dd-item" data-section="settings"><span class="av-dd-icon"></span> Settings</button><button class="av-dd-item" data-section="overview"><span class="av-dd-icon"></span> Dashboard</button><div class="av-dd-divider"></div><button class="av-dd-item" id="av-logout"><span class="av-dd-icon"></span> Sign Out</button></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Notification Dropdown -->
+      <div class="nt-dropdown" id="nt-dropdown">
+        <div class="nt-dropdown-header"><span class="nt-dd-title">Notifications</span><button class="nt-dd-mark" id="nt-mark-read">Mark all read</button></div>
+        <div class="nt-dd-list" id="nt-dd-list"></div>
+      </div>
+
+      <!-- Quick Action Menu -->
+      <div class="qa-menu" id="qa-menu">
+        <button class="qa-item" data-qa="transaction"><span class="qa-icon"></span><span class="qa-label">Add Transaction</span></button>
+        <button class="qa-item" data-qa="budget"><span class="qa-icon"></span><span class="qa-label">Set Budget</span></button>
+        <button class="qa-item" data-qa="goal"><span class="qa-icon"></span><span class="qa-label">New Goal</span></button>
+        <button class="qa-item" data-qa="subscription"><span class="qa-icon"></span><span class="qa-label">Add Subscription</span></button>
+      </div>
+
+      <!-- Toast Container -->
+      <div class="toast-container" id="toast-container"></div>
+
+      <!-- Dashboard Content -->
+      <main class="dash-content" id="dash-content">
+        <!-- Overview Section -->
+        <div class="dash-section active" id="section-overview">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Good morning, Arjun</h1>
+            <p class="dash-subtitle">Here's your financial summary for today.</p>
+          </div>
+
+          <!-- Hero Cards -->
+          <div class="hero-cards">
+            <div class="hero-card hero-main">
+              <div class="hero-card-top">
+                <span class="hero-label">Total Balance</span>
+                <svg class="hero-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="hero-amount" id="dash-total-balance">₹0</div>
+              <div class="hero-trend trend-up">+12.4% this month</div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-top">
+                <span class="hero-label">Monthly Income</span>
+              </div>
+              <div class="hero-amount-sm" id="dash-income">₹0</div>
+              <div class="hero-trend trend-up">+8.2% vs last month</div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-top">
+                <span class="hero-label">Monthly Expenses</span>
+              </div>
+              <div class="hero-amount-sm" id="dash-expenses">₹0</div>
+              <div class="hero-trend trend-down">+3.1% vs last month</div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-top">
+                <span class="hero-label">Total Savings</span>
+              </div>
+              <div class="hero-amount-sm" id="dash-savings">₹0</div>
+              <div class="hero-trend trend-up">+18.5% vs last month</div>
+            </div>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="charts-row">
+            <div class="chart-card-wide">
+              <div class="chart-card-header">
+                <span class="chart-title">Income vs Expenses</span>
+                <div class="chart-legend-row">
+                  <span class="cl-dot income-dot"></span> Income
+                  <span class="cl-dot expense-dot"></span> Expenses
+                </div>
+              </div>
+              <div class="chart-body">
+                <canvas id="income-expense-chart" height="220"></canvas>
+              </div>
+            </div>
+            <div class="chart-card-narrow">
+              <div class="chart-card-header">
+                <span class="chart-title">Spending</span>
+              </div>
+              <div class="chart-body donut-body">
+                <canvas id="donut-chart" height="200" width="200"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transactions + Budgets Row -->
+          <div class="split-row">
+            <div class="split-panel">
+              <div class="panel-header">
+                <h3 class="panel-title">Recent Transactions</h3>
+                <button class="panel-action">View all</button>
+              </div>
+              <div class="tx-list" id="tx-list"></div>
+            </div>
+            <div class="split-panel">
+              <div class="panel-header">
+                <h3 class="panel-title">Budget Planner</h3>
+                <button class="panel-action">Manage</button>
+              </div>
+              <div class="budget-list" id="budget-list"></div>
+            </div>
+          </div>
+
+          <!-- Goals + Insights Row -->
+          <div class="split-row">
+            <div class="split-panel">
+              <div class="panel-header">
+                <h3 class="panel-title">Financial Goals</h3>
+                <button class="panel-action">All goals</button>
+              </div>
+              <div class="goals-grid" id="goals-grid"></div>
+            </div>
+            <div class="split-panel">
+              <div class="panel-header">
+                <h3 class="panel-title">AI Insights</h3>
+                <button class="panel-action">View all</button>
+              </div>
+              <div class="insights-stack" id="insights-stack"></div>
+            </div>
+          </div>
+
+          <!-- Subscriptions -->
+          <div class="full-panel">
+            <div class="panel-header">
+              <h3 class="panel-title">Subscriptions</h3>
+              <button class="panel-action">Manage</button>
+            </div>
+            <div class="subs-grid" id="subs-grid"></div>
+          </div>
+        </div>
+
+        <!-- ===== TRANSACTIONS ===== -->
+        <div class="dash-section" id="section-transactions">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Transactions</h1>
+            <p class="dash-subtitle">Track every rupee that moves. <span class="tx-count-badge">248 this month</span></p>
+          </div>
+          <div class="tx-summary-cards">
+            <div class="sc-card">
+              <div class="sc-label">Total Spent</div>
+              <div class="sc-amount" id="tx-total-spent">₹1,42,380</div>
+              <div class="sc-trend trend-up">↓ 3.2% from last month</div>
+            </div>
+            <div class="sc-card">
+              <div class="sc-label">Total Received</div>
+              <div class="sc-amount" id="tx-total-received" style="color:#34c759">₹2,15,500</div>
+              <div class="sc-trend trend-up">↑ 5.8% from last month</div>
+            </div>
+            <div class="sc-card">
+              <div class="sc-label">Net Cash Flow</div>
+              <div class="sc-amount" style="color:#305CDE">+₹73,120</div>
+              <div class="sc-trend trend-up">Positive this month</div>
+            </div>
+            <div class="sc-card">
+              <div class="sc-label">Pending</div>
+              <div class="sc-amount" style="color:#ff9500">₹12,450</div>
+              <div class="sc-trend">3 transactions pending</div>
+            </div>
+          </div>
+          <div class="tx-controls">
+            <div class="tx-filter-row">
+              <div class="tx-filter-group">
+                <button class="tx-filter-btn active">All</button>
+                <button class="tx-filter-btn">Income</button>
+                <button class="tx-filter-btn">Expenses</button>
+                <button class="tx-filter-btn">Pending</button>
+              </div>
+                <div class="tx-filter-right">
+                <select class="tx-select" id="tx-cat-filter"><option value="all">All Categories</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Entertainment</option><option>Income</option></select>
+                <select class="tx-select" id="tx-date-filter"><option value="all">This Month</option><option value="last">Last Month</option><option value="3m">Last 3 Months</option><option value="year">This Year</option><option value="custom">Custom</option></select>
+                <button class="tx-export-btn" id="tx-export-btn">📥 Export</button>
+              </div>
+            </div>
+          </div>
+          <div class="tx-table-wrapper">
+            <table class="tx-table">
+              <thead>
+                <tr>
+                  <th class="tx-th tx-th-date">Date</th>
+                  <th class="tx-th">Description</th>
+                  <th class="tx-th">Category</th>
+                  <th class="tx-th">Payment</th>
+                  <th class="tx-th">Status</th>
+                  <th class="tx-th tx-th-amount">Amount</th>
+                  <th class="tx-th tx-th-action"></th>
+                </tr>
+              </thead>
+              <tbody id="tx-table-body">
+                <tr class="tx-row"><td class="tx-td-date">12 Jun</td><td><span class="tx-desc">Salary Credit</span><span class="tx-merchant">Acme Corp</span></td><td><span class="tx-cat-badge income-badge">Income</span></td><td>Bank Transfer</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount positive">+₹85,000</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">11 Jun</td><td><span class="tx-desc">Swiggy Order</span><span class="tx-merchant">Swiggy</span></td><td><span class="tx-cat-badge food-badge">Food</span></td><td>UPI</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount negative">-₹450</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">10 Jun</td><td><span class="tx-desc">Electricity Bill</span><span class="tx-merchant">BSES</span></td><td><span class="tx-cat-badge bills-badge">Bills</span></td><td>AutoPay</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount negative">-₹2,340</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">09 Jun</td><td><span class="tx-desc">Uber Ride</span><span class="tx-merchant">Uber</span></td><td><span class="tx-cat-badge transport-badge">Transport</span></td><td>Credit Card</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount negative">-₹280</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">08 Jun</td><td><span class="tx-desc">Freelance Payment</span><span class="tx-merchant">Upwork</span></td><td><span class="tx-cat-badge income-badge">Income</span></td><td>Bank Transfer</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount positive">+₹12,000</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">07 Jun</td><td><span class="tx-desc">Zomato Order</span><span class="tx-merchant">Zomato</span></td><td><span class="tx-cat-badge food-badge">Food</span></td><td>UPI</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount negative">-₹620</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">06 Jun</td><td><span class="tx-desc">Amazon Purchase</span><span class="tx-merchant">Amazon</span></td><td><span class="tx-cat-badge shopping-badge">Shopping</span></td><td>Credit Card</td><td><span class="tx-status pending">Pending</span></td><td class="tx-td-amount negative">-₹3,299</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+                <tr class="tx-row"><td class="tx-td-date">05 Jun</td><td><span class="tx-desc">Netflix Renewal</span><span class="tx-merchant">Netflix</span></td><td><span class="tx-cat-badge entertainment-badge">Entertainment</span></td><td>AutoPay</td><td><span class="tx-status completed">Completed</span></td><td class="tx-td-amount negative">-₹649</td><td class="tx-td-action"><button class="tx-row-btn">⋯</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tx-empty" style="display:none;text-align:center;padding:32px;color:#86868b;font-size:13px">No transactions match your filters</div>
+          <div class="tx-pagination" id="tx-pagination" style="display:none;text-align:center;padding:12px;gap:8px;align-items:center;justify-content:center;color:#86868b;font-size:12px">
+            <button class="tx-page-btn" id="tx-page-prev" style="padding:6px 14px;border:1px solid rgba(0,0,0,0.06);border-radius:8px;background:#fff;cursor:pointer;font-size:12px;color:#1d1d1f">← Prev</button>
+            <span id="tx-page-info">Page 1 of 1</span>
+            <button class="tx-page-btn" id="tx-page-next" style="padding:6px 14px;border:1px solid rgba(0,0,0,0.06);border-radius:8px;background:#fff;cursor:pointer;font-size:12px;color:#1d1d1f">Next →</button>
+          </div>
+        </div>
+
+        <!-- ===== BUDGETS ===== -->
+        <div class="dash-section" id="section-budgets">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Budgets</h1>
+            <p class="dash-subtitle">Set limits, stay in control. <span class="tx-count-badge warning-badge">2 overspent</span></p>
+          </div>
+          <div class="b-overview-card">
+            <div class="b-overview-left">
+              <div class="b-ov-label">Monthly Budget</div>
+              <div class="b-ov-amount">₹1,20,000</div>
+              <div class="b-ov-bar-wrap"><div class="b-ov-bar"><div class="b-ov-fill" style="width:78%"></div></div><span class="b-ov-pct">78% used</span></div>
+            </div>
+            <div class="b-overview-mid">
+              <div class="b-ov-stat"><span class="b-ov-stat-label">Spent</span><span class="b-ov-stat-value">₹93,600</span></div>
+              <div class="b-ov-stat"><span class="b-ov-stat-label">Remaining</span><span class="b-ov-stat-value" style="color:#34c759">₹26,400</span></div>
+              <div class="b-ov-stat"><span class="b-ov-stat-label">Days Left</span><span class="b-ov-stat-value">18</span></div>
+            </div>
+            <div class="b-overview-right">
+              <div class="b-ov-alert"><span class="b-ov-alert-icon">⚠️</span> Shopping & Food are overspent</div>
+              <button class="b-ov-btn">Adjust Budgets</button>
+            </div>
+          </div>
+          <div class="b-cards-grid">
+            <div class="b-card danger-card"><div class="b-card-top"><span class="b-card-name">Shopping</span><span class="b-card-pct">92%</span></div><div class="b-card-bar"><div class="b-card-fill danger" style="width:92%"></div></div><div class="b-card-bottom"><span>₹13,800 of ₹15,000</span><span class="b-card-remaining" style="color:#ff3b30">₹1,200 left</span></div></div>
+            <div class="b-card warn-card"><div class="b-card-top"><span class="b-card-name">Food & Dining</span><span class="b-card-pct">85%</span></div><div class="b-card-bar"><div class="b-card-fill warn" style="width:85%"></div></div><div class="b-card-bottom"><span>₹10,200 of ₹12,000</span><span class="b-card-remaining" style="color:#ff9500">₹1,800 left</span></div></div>
+            <div class="b-card safe-card"><div class="b-card-top"><span class="b-card-name">Transport</span><span class="b-card-pct">45%</span></div><div class="b-card-bar"><div class="b-card-fill safe" style="width:45%"></div></div><div class="b-card-bottom"><span>₹3,600 of ₹8,000</span><span class="b-card-remaining" style="color:#34c759">₹4,400 left</span></div></div>
+            <div class="b-card safe-card"><div class="b-card-top"><span class="b-card-name">Entertainment</span><span class="b-card-pct">30%</span></div><div class="b-card-bar"><div class="b-card-fill safe" style="width:30%"></div></div><div class="b-card-bottom"><span>₹1,500 of ₹5,000</span><span class="b-card-remaining" style="color:#34c759">₹3,500 left</span></div></div>
+            <div class="b-card safe-card"><div class="b-card-top"><span class="b-card-name">Bills & Utilities</span><span class="b-card-pct">55%</span></div><div class="b-card-bar"><div class="b-card-fill safe" style="width:55%"></div></div><div class="b-card-bottom"><span>₹6,600 of ₹12,000</span><span class="b-card-remaining" style="color:#34c759">₹5,400 left</span></div></div>
+            <div class="b-card safe-card"><div class="b-card-top"><span class="b-card-name">Healthcare</span><span class="b-card-pct">20%</span></div><div class="b-card-bar"><div class="b-card-fill safe" style="width:20%"></div></div><div class="b-card-bottom"><span>₹1,000 of ₹5,000</span><span class="b-card-remaining" style="color:#34c759">₹4,000 left</span></div></div>
+          </div>
+        </div>
+
+        <!-- ===== ANALYTICS ===== -->
+        <div class="dash-section" id="section-analytics">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Analytics</h1>
+            <p class="dash-subtitle">Deep financial intelligence. <span class="tx-count-badge">Updated today</span></p>
+          </div>
+          <div class="a-stats-row" id="a-stats-row">
+            <div class="a-stat-card"><div class="a-stat-label">Total Income</div><div class="a-stat-value" id="a-total-income">₹0</div><div class="a-stat-trend trend-up">↑ Calculating...</div></div>
+            <div class="a-stat-card"><div class="a-stat-label">Total Expenses</div><div class="a-stat-value" id="a-total-expenses">₹0</div><div class="a-stat-trend trend-up">↓ Calculating...</div></div>
+            <div class="a-stat-card"><div class="a-stat-label">Savings Rate</div><div class="a-stat-value" id="a-savings-rate" style="color:#34c759">0%</div><div class="a-stat-trend trend-up">↑ Calculating...</div></div>
+            <div class="a-stat-card"><div class="a-stat-label">Net Worth</div><div class="a-stat-value" id="a-net-worth" style="color:#305CDE">₹0</div><div class="a-stat-trend" id="a-net-trend">↑ Calculating...</div></div>
+          </div>
+          <div class="a-charts-row">
+            <div class="a-chart-card wide-card">
+              <div class="chart-card-header"><span class="chart-title">Income vs Expenses — 12 Month Trend</span></div>
+              <canvas id="analytics-main-chart" height="260"></canvas>
+            </div>
+            <div class="a-chart-card narrow-card">
+              <div class="chart-card-header"><span class="chart-title">Category Breakdown</span></div>
+              <div class="a-category-list" id="a-category-list">
+              </div>
+            </div>
+          </div>
+          <div class="a-bottom-row">
+            <div class="a-panel">
+              <div class="panel-header"><span class="panel-title">Top Merchants</span></div>
+              <div class="a-merchant-list" id="a-merchant-list">
+              </div>
+            </div>
+            <div class="a-panel">
+              <div class="panel-header"><span class="panel-title">Monthly Trends</span></div>
+              <div class="a-trend-grid" id="a-trend-grid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== GOALS ===== -->
+        <div class="dash-section" id="section-goals">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Financial Goals</h1>
+            <p class="dash-subtitle">Your financial milestones. <span class="tx-count-badge success-badge">4 active · 2 completed</span></p>
+          </div>
+          <div class="g-stats-row">
+            <div class="g-stat-card"><span class="g-stat-label">Active Goals</span><span class="g-stat-value">4</span></div>
+            <div class="g-stat-card"><span class="g-stat-label">Completed</span><span class="g-stat-value" style="color:#34c759">2</span></div>
+            <div class="g-stat-card"><span class="g-stat-label">Total Saved</span><span class="g-stat-value">₹2,80,000</span></div>
+            <div class="g-stat-card"><span class="g-stat-label">Projected</span><span class="g-stat-value" style="color:#305CDE">₹8,50,000</span></div>
+          </div>
+          <div class="g-full-grid">
+            <div class="g-goal-card highlight-card">
+              <div class="g-goal-left">
+                <span class="g-goal-icon">🏠</span>
+              </div>
+              <div class="g-goal-mid">
+                <span class="g-goal-name">Emergency Fund</span>
+                <span class="g-goal-desc">₹65,000 saved of ₹1,00,000 target</span>
+                <div class="g-goal-bar"><div class="g-goal-fill" style="width:65%"></div></div>
+                <span class="g-goal-meta">🎉 65% achieved · Expected completion: Dec 2025</span>
+              </div>
+              <div class="g-goal-right">
+                <div class="g-goal-ring"><svg viewBox="0 0 60 60"><circle class="g-ring-bg" cx="30" cy="30" r="26"/><circle class="g-ring-fg" cx="30" cy="30" r="26" stroke="#34c759" stroke-dasharray="163.36" stroke-dashoffset="57.18"/></svg><span class="g-ring-value">65%</span></div>
+              </div>
+            </div>
+            <div class="g-goal-card">
+              <div class="g-goal-left"><span class="g-goal-icon">💻</span></div>
+              <div class="g-goal-mid">
+                <span class="g-goal-name">New Laptop</span>
+                <span class="g-goal-desc">₹40,000 saved of ₹1,00,000 target</span>
+                <div class="g-goal-bar"><div class="g-goal-fill" style="width:40%;background:#305CDE"></div></div>
+                <span class="g-goal-meta">📅 Target: Mar 2026</span>
+              </div>
+              <div class="g-goal-right">
+                <div class="g-goal-ring"><svg viewBox="0 0 60 60"><circle class="g-ring-bg" cx="30" cy="30" r="26"/><circle class="g-ring-fg" cx="30" cy="30" r="26" stroke="#305CDE" stroke-dasharray="163.36" stroke-dashoffset="98.02"/></svg><span class="g-ring-value">40%</span></div>
+              </div>
+            </div>
+            <div class="g-goal-card">
+              <div class="g-goal-left"><span class="g-goal-icon">✈️</span></div>
+              <div class="g-goal-mid">
+                <span class="g-goal-name">Europe Trip</span>
+                <span class="g-goal-desc">₹55,000 saved of ₹2,50,000 target</span>
+                <div class="g-goal-bar"><div class="g-goal-fill" style="width:22%;background:#7C3AED"></div></div>
+                <span class="g-goal-meta">📅 Target: Dec 2026</span>
+              </div>
+              <div class="g-goal-right">
+                <div class="g-goal-ring"><svg viewBox="0 0 60 60"><circle class="g-ring-bg" cx="30" cy="30" r="26"/><circle class="g-ring-fg" cx="30" cy="30" r="26" stroke="#7C3AED" stroke-dasharray="163.36" stroke-dashoffset="127.42"/></svg><span class="g-ring-value">22%</span></div>
+              </div>
+            </div>
+            <div class="g-goal-card">
+              <div class="g-goal-left"><span class="g-goal-icon">🏡</span></div>
+              <div class="g-goal-mid">
+                <span class="g-goal-name">Down Payment</span>
+                <span class="g-goal-desc">₹1,20,000 saved of ₹10,00,000 target</span>
+                <div class="g-goal-bar"><div class="g-goal-fill" style="width:12%;background:#ff9500"></div></div>
+                <span class="g-goal-meta">📅 Target: Jun 2028</span>
+              </div>
+              <div class="g-goal-right">
+                <div class="g-goal-ring"><svg viewBox="0 0 60 60"><circle class="g-ring-bg" cx="30" cy="30" r="26"/><circle class="g-ring-fg" cx="30" cy="30" r="26" stroke="#ff9500" stroke-dasharray="163.36" stroke-dashoffset="143.76"/></svg><span class="g-ring-value">12%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SUBSCRIPTIONS ===== -->
+        <div class="dash-section" id="section-subscriptions">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Subscriptions</h1>
+            <p class="dash-subtitle">Know what you're paying for. <span class="tx-count-badge warning-badge">3 renewing soon</span></p>
+          </div>
+          <div class="s-summary-row">
+            <div class="s-stat-card"><span class="s-stat-label">Monthly Total</span><span class="s-stat-value">₹1,267</span></div>
+            <div class="s-stat-card"><span class="s-stat-label">Annual Total</span><span class="s-stat-value">₹15,204</span></div>
+            <div class="s-stat-card"><span class="s-stat-label">Active Subs</span><span class="s-stat-value">6</span></div>
+            <div class="s-stat-card"><span class="s-stat-label">Renewing This Month</span><span class="s-stat-value" style="color:#ff9500">3</span></div>
+          </div>
+          <div class="s-manage-grid">
+            <div class="s-card"><div class="s-card-icon" style="background:#1DB95420;color:#1DB954">🎵</div><span class="s-card-name">Spotify Premium</span><span class="s-card-cost">₹119/mo</span><span class="s-card-renewal">Renews in 12 days</span><button class="s-card-btn">Cancel</button></div>
+            <div class="s-card"><div class="s-card-icon" style="background:#E5091420;color:#E50914">📺</div><span class="s-card-name">Netflix</span><span class="s-card-cost">₹649/mo</span><span class="s-card-renewal">Renews in 5 days</span><button class="s-card-btn">Cancel</button></div>
+            <div class="s-card"><div class="s-card-icon" style="background:#007AFF20;color:#007AFF">☁️</div><span class="s-card-name">iCloud+ 200GB</span><span class="s-card-cost">₹249/mo</span><span class="s-card-renewal">Renews in 20 days</span><button class="s-card-btn">Cancel</button></div>
+            <div class="s-card"><div class="s-card-icon" style="background:#FF990020;color:#FF9900">🛒</div><span class="s-card-name">Amazon Prime</span><span class="s-card-cost">₹1,499/yr</span><span class="s-card-renewal">Renews in 45 days</span><button class="s-card-btn">Cancel</button></div>
+            <div class="s-card"><div class="s-card-icon" style="background:#00A8E120;color:#00A8E1">🎮</div><span class="s-card-name">Xbox Game Pass</span><span class="s-card-cost">₹349/mo</span><span class="s-card-renewal">Renews in 18 days</span><button class="s-card-btn">Cancel</button></div>
+            <div class="s-card"><div class="s-card-icon" style="background:#FF2D5520;color:#FF2D55">🏋️</div><span class="s-card-name">Cult.fit Elite</span><span class="s-card-cost">₹799/mo</span><span class="s-card-renewal">Renews in 8 days</span><button class="s-card-btn">Cancel</button></div>
+          </div>
+        </div>
+
+        <!-- ===== INSIGHTS ===== -->
+        <div class="dash-section" id="section-insights">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">AI Insights</h1>
+            <p class="dash-subtitle">AI-powered financial wisdom. <span class="tx-count-badge success-badge">3 new insights</span></p>
+          </div>
+          <div class="i-summary-card">
+            <div class="i-summary-icon">🧠</div>
+            <div class="i-summary-content">
+              <div class="i-summary-title">Smart Summary</div>
+              <div class="i-summary-text">This month you saved ₹12,000 more than your target. Your spending on food increased by 18%, but transport costs dropped 5%. Overall financial health is <strong>strong</strong>.</div>
+            </div>
+            <div class="i-summary-score">
+              <div class="i-score-ring"><svg viewBox="0 0 60 60"><circle class="i-ring-bg" cx="30" cy="30" r="26"/><circle class="i-ring-fg" cx="30" cy="30" r="26" stroke="#34c759" stroke-dasharray="163.36" stroke-dashoffset="16.34"/></svg><span class="i-score-value">90</span></div>
+              <span class="i-score-label">Health Score</span>
+            </div>
+          </div>
+          <div class="i-grid">
+            <div class="i-card">
+              <div class="i-card-icon-wrap spending-icon">🍽️</div>
+              <div class="i-card-title">Spending Pattern</div>
+              <div class="i-card-text">You spent 18% more on food this month. Swiggy and Zomato orders increased by 12 transactions.</div>
+              <div class="i-card-tag warning-tag">Spending Alert</div>
+            </div>
+            <div class="i-card">
+              <div class="i-card-icon-wrap savings-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+              <div class="i-card-title">Savings Milestone</div>
+              <div class="i-card-text">You saved ₹12,000 more than your monthly target. Emergency fund is 65% complete!</div>
+              <div class="i-card-tag success-tag">Milestone Achieved</div>
+            </div>
+            <div class="i-card">
+              <div class="i-card-icon-wrap sub-icon-wrap">📋</div>
+              <div class="i-card-title">Subscription Analysis</div>
+              <div class="i-card-text">Subscription costs increased by ₹450 this month. 3 services renewing within 12 days.</div>
+              <div class="i-card-tag warning-tag">Action Needed</div>
+            </div>
+            <div class="i-card">
+              <div class="i-card-icon-wrap transport-icon">🚗</div>
+              <div class="i-card-title">Transport Savings</div>
+              <div class="i-card-text">You saved ₹1,200 on transport this month. Using more UPI and less cash.</div>
+              <div class="i-card-tag success-tag">Good Habit</div>
+            </div>
+            <div class="i-card">
+              <div class="i-card-icon-wrap invest-icon">📈</div>
+              <div class="i-card-title">Investment Opportunity</div>
+              <div class="i-card-text">You have ₹26,400 idle in your account. Consider moving to a high-yield savings account.</div>
+              <div class="i-card-tag info-tag">Recommendation</div>
+            </div>
+            <div class="i-card">
+              <div class="i-card-icon-wrap bill-icon">💡</div>
+              <div class="i-card-title">Bill Optimization</div>
+              <div class="i-card-text">Your electricity bill is 15% higher than last month. Consider switching to off-peak usage.</div>
+              <div class="i-card-tag info-tag">Tip</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CARDS ===== -->
+        <div class="dash-section" id="section-cards">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Cards & Cash Flow</h1>
+            <p class="dash-subtitle">Manage your cards. <span class="tx-count-badge" id="cards-count">0 cards</span></p>
+          </div>
+          <div class="cards-layout">
+            <div class="cards-stack" id="cards-stack">
+              <div class="cards-viewport" id="cards-viewport"></div>
+              <div class="cards-swipe-hint">↕ Drag card to switch</div>
+            </div>
+            <div class="cards-side">
+              <div class="cards-add-card">
+                <h3 class="cards-add-title">Add New Card</h3>
+                <div class="cards-add-form" id="cards-add-form">
+                  <div class="cf-row"><label class="cf-label">Card Number</label><input type="text" class="cf-input" id="cf-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19"></div>
+                  <div class="cf-row-3col">
+                    <div><label class="cf-label">Expiry</label><input type="text" class="cf-input" id="cf-expiry" placeholder="MM/YY" maxlength="5"></div>
+                    <div><label class="cf-label">CVV</label><input type="text" class="cf-input" id="cf-cvv" placeholder="***" maxlength="4"></div>
+                    <div><label class="cf-label">Name</label><input type="text" class="cf-input" id="cf-name" placeholder="Cardholder"></div>
+                  </div>
+                  <button class="cf-submit" id="cf-submit">Add Card</button>
+                </div>
+              </div>
+              <div class="cards-summary" id="cards-summary">
+                <h3 class="cards-add-title">Card Summary</h3>
+                <div class="cs-row"><span class="cs-label">Total Cards</span><span class="cs-value" id="cs-total">0</span></div>
+                <div class="cs-row"><span class="cs-label">Monthly Limit</span><span class="cs-value" id="cs-limit">₹0</span></div>
+                <div class="cs-row"><span class="cs-label">Total Used</span><span class="cs-value" id="cs-used">₹0</span></div>
+                <div class="cs-row"><span class="cs-label">Available</span><span class="cs-value" id="cs-avail" style="color:#34c759">₹0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SETTINGS ===== -->
+        <div class="dash-section" id="section-settings">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Settings</h1>
+            <p class="dash-subtitle">Customize your experience.</p>
+          </div>
+          <div class="set-tabs">
+            <button class="set-tab active" data-stab="general">General</button>
+            <button class="set-tab" data-stab="notifications">Notifications</button>
+            <button class="set-tab" data-stab="security">Security</button>
+            <button class="set-tab" data-stab="preferences">Preferences</button>
+          </div>
+          <div class="set-panel active" id="set-general">
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Display</span></div><div class="set-row"><span class="set-label">Theme</span><div class="set-theme-group"><button class="set-theme-btn active" data-theme="light">☀️ Light</button><button class="set-theme-btn" data-theme="system">💻 System</button><button class="set-theme-btn" data-theme="dark">🌙 Dark</button></div></div><div class="set-row"><span class="set-label">Language</span><select class="set-select"><option>English</option><option>Hindi</option><option>Hinglish</option></select></div><div class="set-row"><span class="set-label">Currency</span><select class="set-select"><option>₹ INR</option><option>$ USD</option><option>€ EUR</option></select></div></div>
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Dashboard</span></div><div class="set-row"><span class="set-label">Default View</span><select class="set-select"><option>Overview</option><option>Transactions</option><option>Analytics</option></select></div><div class="set-row"><span class="set-label">Compact Sidebar</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Show Charts</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div></div>
+          </div>
+          <div class="set-panel" id="set-notifications">
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Push Notifications</span></div><div class="set-row"><span class="set-label">Transaction Alerts</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Budget Warnings</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Subscription Reminders</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Weekly Reports</span><label class="set-toggle"><input type="checkbox"><span class="set-toggle-slider"></span></label></div></div>
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Email Preferences</span></div><div class="set-row"><span class="set-label">Monthly Statement</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Promotional Offers</span><label class="set-toggle"><input type="checkbox"><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Security Alerts</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div></div>
+          </div>
+          <div class="set-panel" id="set-security">
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Authentication</span></div><div class="set-row"><span class="set-label">Two-Factor Auth</span><label class="set-toggle"><input type="checkbox"><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Biometric Login</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Session Timeout</span><select class="set-select"><option>5 minutes</option><option selected>15 minutes</option><option>30 minutes</option><option>Never</option></select></div></div>
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Privacy</span></div><div class="set-row"><span class="set-label">Share Analytics</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div><div class="set-row"><span class="set-label">Personalized Insights</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div></div>
+          </div>
+          <div class="set-panel" id="set-preferences">
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Budgeting</span></div><div class="set-row"><span class="set-label">Default Budget Period</span><select class="set-select"><option selected>Monthly</option><option>Weekly</option><option>Yearly</option></select></div><div class="set-row"><span class="set-label">Overspend Tolerance</span><select class="set-select"><option>5%</option><option selected>10%</option><option>20%</option></select></div><div class="set-row"><span class="set-label">Round Up Savings</span><label class="set-toggle"><input type="checkbox"><span class="set-toggle-slider"></span></label></div></div>
+            <div class="set-card"><div class="set-card-header"><span class="set-card-title">Data & Export</span></div><div class="set-row" style="gap:10px;flex-wrap:wrap"><button class="set-action-btn">Export All Data</button><button class="set-action-btn">Download Report</button><button class="set-action-btn danger-btn">Clear Data</button></div></div>
+          </div>
+        </div>
+
+        <!-- ===== PROFILE ===== -->
+        <div class="dash-section" id="section-profile">
+          <div class="dash-section-header">
+            <h1 class="dash-greeting">Profile</h1>
+            <p class="dash-subtitle">Your personal information.</p>
+          </div>
+          <div class="p-grid">
+            <div class="p-card p-avatar-card">
+              <div class="p-avatar-large">AR</div>
+              <h2 class="p-name">Arjun Reddy</h2>
+              <span class="p-name" id="p-name">Priyansh</span>
+              <span class="p-email" id="p-email">priyansh@finwave.in</span>
+              <span class="p-phone" id="p-phone">+91 98765 43210</span>
+              <div class="p-badge-row" id="p-badges"><span class="p-badge">Premium Member</span><span class="p-badge" id="p-since">Since 2026</span></div>
+              <button class="p-edit-btn">✏️ Edit Profile</button>
+            </div>
+            <div class="p-card">
+              <div class="p-card-header"><span class="set-card-title">Linked Accounts</span></div>
+              <div id="p-accounts"><div class="p-account-row"><span class="p-acc-icon">🏦</span><div class="p-acc-info"><span class="p-acc-name">HDFC Bank</span><span class="p-acc-detail">Savings Account</span></div><span class="p-acc-status connected">Connected</span></div></div>
+              <button class="p-link-btn">+ Link New Account</button>
+            </div>
+            <div class="p-card">
+              <div class="p-card-header"><span class="set-card-title">Recent Activity</span></div>
+              <div id="p-activity"></div>
+            </div>
+            <div class="p-card">
+              <div class="p-card-header"><span class="set-card-title">Preferences</span></div>
+              <div class="set-row"><span class="set-label">Email Notifications</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div>
+              <div class="set-row"><span class="set-label">SMS Alerts</span><label class="set-toggle"><input type="checkbox"><span class="set-toggle-slider"></span></label></div>
+              <div class="set-row"><span class="set-label">WhatsApp Updates</span><label class="set-toggle"><input type="checkbox" checked><span class="set-toggle-slider"></span></label></div>
+              <div class="set-row"><span class="set-label">Dark Mode</span><label class="set-toggle"><input type="checkbox"><span class="set-toggle-slider"></span></label></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== ACTION MODALS ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box" id="modal-box">
+      <div class="modal-header"><span class="modal-title" id="modal-title">Add Transaction</span><button class="modal-close" id="modal-close">✕</button></div>
+
+      <!-- Add Transaction Form -->
+      <form class="modal-form active" id="form-transaction">
+        <div class="mf-type-toggle"><button type="button" class="mf-type-btn active" data-mft="expense">Expense</button><button type="button" class="mf-type-btn" data-mft="income">Income</button></div>
+        <input type="hidden" name="tx-type" id="tx-type" value="expense">
+        <div class="mf-row"><label class="mf-label">Amount (₹)</label><input type="number" class="mf-input" id="tx-amount" placeholder="e.g. 5000" required></div>
+        <div class="mf-row"><label class="mf-label">Description</label><input type="text" class="mf-input" id="tx-desc" placeholder="e.g. Swiggy Order" required></div>
+        <div class="mf-row"><label class="mf-label">Merchant</label><input type="text" class="mf-input" id="tx-merchant-input" placeholder="e.g. Swiggy"></div>
+        <div class="mf-row mf-row-2col">
+          <div><label class="mf-label">Category</label><select class="mf-select" id="tx-cat"><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Entertainment</option><option>Income</option><option>Others</option></select></div>
+          <div><label class="mf-label">Payment</label><select class="mf-select" id="tx-pay"><option>UPI</option><option>Credit Card</option><option>Bank Transfer</option><option>AutoPay</option><option>Cash</option></select></div>
+        </div>
+        <div class="mf-row"><label class="mf-label">Date</label><input type="date" class="mf-input" id="tx-date"></div>
+        <button type="submit" class="mf-submit">Add Transaction</button>
+      </form>
+
+      <!-- Set Budget Form -->
+      <form class="modal-form" id="form-budget">
+        <div class="mf-row"><label class="mf-label">Category</label><select class="mf-select" id="b-cat"><option>Food & Dining</option><option>Transport</option><option>Shopping</option><option>Entertainment</option><option>Bills & Utilities</option><option>Healthcare</option><option>Others</option></select></div>
+        <div class="mf-row"><label class="mf-label">Monthly Budget (₹)</label><input type="number" class="mf-input" id="b-amount" placeholder="e.g. 12000" required></div>
+        <div class="mf-row mf-row-2col">
+          <div><label class="mf-label">Period</label><select class="mf-select" id="b-period"><option selected>Monthly</option><option>Weekly</option><option>Yearly</option></select></div>
+          <div><label class="mf-label">Alert at</label><select class="mf-select" id="b-alert"><option>80%</option><option selected>90%</option><option>100%</option></select></div>
+        </div>
+        <button type="submit" class="mf-submit">Set Budget</button>
+      </form>
+
+      <!-- New Goal Form -->
+      <form class="modal-form" id="form-goal">
+        <div class="mf-row"><label class="mf-label">Goal Name</label><input type="text" class="mf-input" id="g-name" placeholder="e.g. Emergency Fund" required></div>
+        <div class="mf-row"><label class="mf-label">Target Amount (₹)</label><input type="number" class="mf-input" id="g-target" placeholder="e.g. 100000" required></div>
+        <div class="mf-row mf-row-2col">
+          <div><label class="mf-label">Initial Saved (₹)</label><input type="number" class="mf-input" id="g-saved" placeholder="0" value="0"></div>
+          <div><label class="mf-label">Target Date</label><input type="date" class="mf-input" id="g-date"></div>
+        </div>
+        <div class="mf-row"><label class="mf-label">Icon</label><div class="mf-icon-picker" id="g-icon-picker"><button type="button" class="mf-icon-btn active">🏠</button><button type="button" class="mf-icon-btn">💻</button><button type="button" class="mf-icon-btn">✈️</button><button type="button" class="mf-icon-btn">🏡</button><button type="button" class="mf-icon-btn">🚗</button><button type="button" class="mf-icon-btn">🎓</button><button type="button" class="mf-icon-btn">💼</button><button type="button" class="mf-icon-btn">🎯</button></div></div>
+        <input type="hidden" id="g-icon" value="🏠">
+        <button type="submit" class="mf-submit">Create Goal</button>
+      </form>
+
+      <!-- Add Subscription Form -->
+      <form class="modal-form" id="form-subscription">
+        <div class="mf-row"><label class="mf-label">Service Name</label><input type="text" class="mf-input" id="s-name" placeholder="e.g. Netflix" required></div>
+        <div class="mf-row mf-row-2col">
+          <div><label class="mf-label">Cost (₹)</label><input type="number" class="mf-input" id="s-cost" placeholder="e.g. 649" required></div>
+          <div><label class="mf-label">Billing Cycle</label><select class="mf-select" id="s-cycle"><option>Monthly</option><option>Yearly</option><option>Quarterly</option></select></div>
+        </div>
+        <div class="mf-row"><label class="mf-label">Next Renewal</label><input type="date" class="mf-input" id="s-renewal"></div>
+        <div class="mf-row"><label class="mf-label">Icon</label><div class="mf-icon-picker"><button type="button" class="mf-icon-btn active">🎵</button><button type="button" class="mf-icon-btn">📺</button><button type="button" class="mf-icon-btn">☁️</button><button type="button" class="mf-icon-btn">🛒</button><button type="button" class="mf-icon-btn">🎮</button><button type="button" class="mf-icon-btn">🏋️</button><button type="button" class="mf-icon-btn">📰</button><button type="button" class="mf-icon-btn">💻</button></div></div>
+        <input type="hidden" id="s-icon" value="🎵">
+        <button type="submit" class="mf-submit">Add Subscription</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Built By Priyansh Watermark -->
+  <div class="built-by" id="built-by">
+    <span class="built-by-text">Built by Priyansh</span>
+    <button class="built-by-close" id="built-by-close">&times;</button>
+  </div>
+  <script src="app.js?v=9"></script>
+</body>
+</html>
